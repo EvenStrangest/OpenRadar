@@ -1,4 +1,9 @@
 import setuptools
+import codecs
+
+def read_text(filepath):
+    with codecs.open(filepath, "r", encoding="utf-8") as f:
+        return f.read()
 
 def versionDev():
     from setuptools_scm.version import get_local_dirty_tag
