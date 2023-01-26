@@ -10,6 +10,8 @@ def versionDev():
 
     return {'local_scheme': clean_scheme}
 
+requirements = read_text(os.path.join(here, 'requirements.txt')).splitlines()
+
 setuptools.setup(
     name="openradar",
     version="1.0.0",
@@ -19,6 +21,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
+    install_requires=requirements,
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
