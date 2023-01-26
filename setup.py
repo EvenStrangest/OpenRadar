@@ -12,7 +12,7 @@ def versionDev():
 
     return {'local_scheme': clean_scheme}
 
-requirements = read_text(os.path.join(here, 'requirements.txt')).splitlines()
+requirements = read_text(os.path.join(os.path.dirname(__file__), 'requirements.txt')).splitlines()
 
 setuptools.setup(
     name="openradar",
